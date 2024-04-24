@@ -1,0 +1,191 @@
+@font-face {
+  font-family: NeonFont;
+  src: url('../../fonts/NeonGlow-8VLz.ttf');
+  font-style: normal;
+}
+@font-face {
+  font-family: ButtonNeonFont;
+  src: url('../../fonts/Codystar-Regular.ttf');
+  font-style: normal;
+}
+@font-face {
+  font-family: Denver;
+  src: url('../../fonts/hellodenverdisplayregular_v1.6.ttf');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: DenverBold;
+  src: url('../../fonts/hellodenverdisplaybold_v1.6.ttf');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --text-white: rgb(172, 172, 172);
+}
+
+html {
+  /* background-color: #191919; */
+  background-color: black;
+  color: var(--text-white);
+  font-family: Inter, sans-serif;
+
+  /* background: radial-gradient(circle, rgb(29, 19, 20), black); */
+}
+
+.flex {
+  display: flex;
+}
+
+.neon-wrapper {
+  padding: 2rem 10%;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-buttons {
+  margin-top: 3rem;
+  gap: 2rem;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.hero-buttons a {
+  padding: 1em 2em;
+  color: white;
+  border-radius: 50rem;
+  text-decoration: none;
+
+  font-weight: 600;
+  font-size: 1.1rem;
+
+  box-shadow: 0 0 0.5rem var(--text-white), inset 0 0 0.3rem var(--text-white);
+  border: solid var(--text-white) 3px;
+
+  transition: box-shadow ease-in-out 0.2s;
+}
+
+.hero-buttons a:hover {
+  box-shadow: 0 0 2rem var(--text-white), inset 0 0 0.7rem var(--text-white);
+}
+
+#right-hero-btn {
+  margin-right: 2rem;
+}
+
+h1 {
+  font-size: 5rem;
+  font-family: NeonFont, sans-serif;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  letter-spacing: 0.3rem;
+}
+
+.sub-header {
+  text-align: center;
+  font-size: 1.2rem;
+  width: clamp(300px, 60%, 1500px);
+}
+
+/* animations */
+
+.glowing {
+  animation-name: Glow-repeat;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: both;
+  animation-fill-mode: both;
+}
+
+.broken {
+  --shadow-off: 0 0 0.5rem transparent;
+  animation-name: Broken;
+}
+
+.main-wrapper {
+  gap: 3rem;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.main-text {
+  font-size: 1.1rem;
+}
+
+.gradient-element {
+  position: fixed;
+  background: radial-gradient(rgba(255, 198, 255, 0.188) 0%, rgba(0, 17, 36, 0) 70%);
+  width: 120vw;
+  height: 70vw;
+  bottom: -10vw;
+  left: -50vw;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+:root {
+  --glowing-shadow-1: 0 0 3rem rgb(255, 88, 88);
+  --glowing-color-1: rgb(255, 194, 151);
+  --glowing-shadow-2: 0 0 6rem rgb(255, 163, 76);
+  --glowing-color-2: rgb(255, 234, 193);
+}
+
+@keyframes Glow-repeat {
+  0%,
+  100% {
+    text-shadow: var(--glowing-shadow-1);
+    color: var(--glowing-color-1);
+  }
+  50% {
+    text-shadow: var(--glowing-shadow-2);
+    color: var(--glowing-color-2);
+  }
+}
+
+@keyframes Broken {
+  0%,
+  100% {
+    color: gray;
+    text-shadow: var(--shadow-off);
+  }
+  20% {
+    text-shadow: var(--glowing-shadow-1);
+    color: var(--glowing-color-1);
+  }
+  21% {
+    color: gray;
+    text-shadow: var(--shadow-off);
+  }
+  22% {
+    text-shadow: var(--glowing-shadow-1);
+    color: var(--glowing-color-1);
+  }
+  24% {
+    color: gray;
+    text-shadow: var(--shadow-off);
+  }
+  25% {
+    text-shadow: var(--glowing-shadow-2);
+    color: var(--glowing-color-2);
+  }
+  28% {
+    color: gray;
+    text-shadow: var(--shadow-off);
+  }
+  50% {
+    text-shadow: var(--glowing-shadow-2);
+    color: var(--glowing-color-2);
+  }
+  80% {
+    color: gray;
+    text-shadow: var(--shadow-off);
+  }
+}
