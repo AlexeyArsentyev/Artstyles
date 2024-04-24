@@ -122,20 +122,21 @@ h1 {
 
 .gradient-element {
   position: fixed;
-  background: radial-gradient(rgba(255, 198, 255, 0.188) 0%, rgba(0, 17, 36, 0) 70%);
-  width: 120vw;
-  height: 70vw;
-  bottom: -10vw;
-  left: -50vw;
+  background: radial-gradient(rgba(255, 215, 198, 0.188) 0%, rgba(0, 17, 36, 0) 70%);
+  width: 100vw;
+  height: 70vh;
+
+  left: -30vw;
+  bottom: 20vh;
   background-repeat: no-repeat;
   z-index: -1;
 }
 
 :root {
-  --glowing-shadow-1: 0 0 3rem rgb(255, 88, 88);
-  --glowing-color-1: rgb(255, 194, 151);
-  --glowing-shadow-2: 0 0 6rem rgb(255, 163, 76);
-  --glowing-color-2: rgb(255, 234, 193);
+  --glowing-shadow-1: 0 0 2rem rgb(255, 183, 129);
+  --glowing-color-1: rgb(255, 244, 180);
+  --glowing-shadow-2: 0 0 6rem rgb(255, 130, 219);
+  --glowing-color-2: rgb(255, 217, 235);
 }
 
 @keyframes Glow-repeat {
