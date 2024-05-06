@@ -1,0 +1,14 @@
+.card {
+  padding: 0.8em;
+  flex-basis: 15em;
+
+  border-radius: 1em;
+  max-width: max-content;
+  background-color: #000000;
+}
+.card img {
+  border-radius: 1em;
+}
+.card h3 {
+  padding: 0 1em;
+}

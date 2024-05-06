@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Neon.css';
+import Card from '../Card/Card';
 
 const Neon = () => {
+  const headerText = 'NEON LIGHTS';
+
+  const headerArray = headerText.split('');
+
+  const [classNames, setClassNames] = useState(Array(headerArray.length).fill('glow'));
+
+  const handleHeaderCLick = (newClass, id) => {
+    const newClassNames = classNames;
+    newClassNames[id] = newClass;
+    setClassNames(newClassNames);
+    console.log(classNames);
+  };
+
   return (
     <div className="neon-wrapper">
       <h1 className="flex-center flex-wrap">
@@ -9,11 +23,15 @@ const Neon = () => {
         <span className="broken glowing">X</span>
         <span className="glowing">T IDK</span> */}
 
-        <span className="glowing">NEON&nbsp;</span>
+        {/* <span className="glowing">NEON&nbsp;</span> */}
         <div>
-          <span className="glowing"> LI</span>
-          <span className="broken glowing">G</span>
-          <span className="glowing">HTS</span>
+          {headerArray.map((e, id) => {
+            return (
+              <span className={classNames[id]} onClick={() => handleHeaderCLick('glow broken', id)}>
+                {e}
+              </span>
+            );
+          })}
         </div>
       </h1>
       <div className="flex-center">
@@ -29,7 +47,7 @@ const Neon = () => {
         <a href="">Modernism</a>
       </div>
       <div className="gradient-element"></div>
-      <div className="flex main-wrapper">
+      <div className="flex-center main-wrapper">
         <div className="main-text">
           <p className>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veritatis odit suscipit
@@ -45,7 +63,23 @@ const Neon = () => {
           </p>
         </div>
 
-        <img src="src\images\neon-gas.jpg" alt="Neon gas" />
+        <img src="src\images\neon-gas.jpg" alt="Neon gas" className="main-img" />
+      </div>
+
+      <h2>Gallery</h2>
+      <div className="flex cards">
+        <Card header={'SomeCard'} img="//unsplash.it/300/300" url={''} />
+        <Card header={'SomeCard'} img="//unsplash.it/301/300" url={''} />
+        <Card header={'SomeCard'} img="//unsplash.it/302/300" url={''} />
+        <Card header={'SomeCard'} img="//unsplash.it/303/300" url={''} />
+        <Card header={'SomeCard'} img="//unsplash.it/304/300" url={''} />
+        <Card header={'SomeCard'} img="//unsplash.it/305/300" url={''} />
+        <Card header={'SomeCard'} img="//unsplash.it/306/300" url={''} />
+        <Card header={'SomeCard'} img="//unsplash.it/307/300" url={''} />
+        <Card header={'SomeCard'} img="//unsplash.it/308/300" url={''} />
+        <Card header={'SomeCard'} img="//unsplash.it/309/300" url={''} />
+        <Card header={'SomeCard'} img="//unsplash.it/310/300" url={''} />
+        <Card header={'SomeCard'} img="//unsplash.it/311/300" url={''} />
       </div>
     </div>
   );
