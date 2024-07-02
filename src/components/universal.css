@@ -1,0 +1,75 @@
+.flex {
+  display: flex;
+}
+
+.neon-wrapper {
+  padding: 2rem 10%;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.cards {
+  gap: 3em;
+  flex-wrap: wrap;
+}
+
+.hero-buttons {
+  margin-top: 3rem;
+  gap: 2rem;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.hero-buttons a {
+  padding: 1em 2em;
+  color: white;
+  border-radius: 50rem;
+  text-decoration: none;
+
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+#right-hero-btn {
+  margin-right: 2rem;
+}
+
+h1 {
+  font-size: 5rem;
+  font-family: NeonFont, sans-serif;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  letter-spacing: 0.3rem;
+}
+
+.sub-header {
+  text-align: center;
+  font-size: 1.2rem;
+  width: clamp(300px, 60%, 1500px);
+}
+
+/* animations */
+
+.main-wrapper {
+  gap: 3rem;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.main-text {
+  font-size: 1.1rem;
+  max-width: 50rem;
+}
+
+.main-img {
+  max-width: 300px;
+}
+
+@media (max-width: 900px) {
+  .main-wrapper {
+    flex-direction: column;
+  }
+}

@@ -1,39 +1,17 @@
 import React, { useState } from 'react';
-import './Neon.css';
+import './Classical.css';
 import Card from '../Card/Card';
-import '../universal.css';
 
-const Neon = () => {
+const Classical = () => {
   const headerText = 'NEON LIGHTS';
 
   const headerArray = headerText.split('');
 
   const [classNames, setClassNames] = useState(Array(headerArray.length).fill('glow'));
 
-  // const handleHeaderCLick = (newClass, id) => {
-  //   const newClassNames = classNames;
-  //   newClassNames[id] = newClass;
-  //   setClassNames(newClassNames);
-  //   console.log(classNames);
-  // };
-
   return (
     <div className="neon-wrapper">
-      <h1 className="flex-center flex-wrap">
-        <span className="glow">NEON TE</span>
-        <span className="broken glow">X</span>
-        <span className="glow">T IDK</span>
-        {/* <span className="glowing">NEON&nbsp;</span>
-        {/* <div>
-          {headerArray.map((e, id) => {
-            return (
-              <span className={classNames[id]} onClick={() => handleHeaderCLick('glow broken', id)}>
-                {e}
-              </span>
-            );
-          })}
-        </div> */}
-      </h1>
+      <h1 className="flex-center flex-wrap">Classical</h1>
       <div className="flex-center">
         <p className="sub-header">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt corporis, earum facere nobis
@@ -85,4 +63,4 @@ const Neon = () => {
   );
 };
 
-export default Neon;
+export default Classical;
